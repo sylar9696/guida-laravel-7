@@ -60,6 +60,9 @@ return [
     ```
 4. Per attivare il progetto lanciare il comando: ```php artisan serve```
 
+## Installare node_modules per usare dipendenze NPM
+1. Lanciare il comando da terminale: ```npm install```
+
 ## Pulire la cache della cartella config
 1. Se modifichiamo i file della cartella config dobbiamo lanciare il comando: ```php artisan config:clear```
 
@@ -90,11 +93,12 @@ return [
 import '../../node_modules/@popperjs/core/dist/umd/popper.min.js';
 import 'bootstrap/js/dist/dropdown';
 ```
-5. Creare nella view del layout il collegamento ai file compilati da webpack.mix.js:
+5. Lanciare d aterminale il comando (per generare files css e js nella cartella public): ```npm run dev```
+6. Creare nella view del layout il collegamento ai file compilati da webpack.mix.js:
 ```
 <link rel="stylesheet" href=" {{ asset('css/app.css') }} ">
 
 <script src=" {{ asset('js/app.js') }} "></script>
 ```
-6. Rilanciare d azero il comando da terminale: ```npm run watch```
-7. Usare le classi di bootstrap 5 nelle views
+7. Rilanciare d azero il comando da terminale: ```npm run watch```
+8. Usare le classi di bootstrap 5 nelle views
