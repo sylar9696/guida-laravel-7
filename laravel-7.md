@@ -82,6 +82,7 @@ return [
 4. Inserire un icona free di prova
 
 ## importare bootstrap 5 in laravel 7
+A. Lanciare il comando se non ancora fatto: ```npm i```
 1. Lanciare il comando da terminale: ```npm install bootstrap```
 2. Lanciare il comando da terminale: ```npm i @popperjs/core```
 3. Aprire il file 📃app.scss e inserire:
@@ -93,7 +94,7 @@ return [
 import '../../node_modules/@popperjs/core/dist/umd/popper.min.js';
 import 'bootstrap/js/dist/dropdown';
 ```
-5. Lanciare d aterminale il comando (per generare files css e js nella cartella public): ```npm run dev```
+5. Lanciare da terminale il comando (per generare files css e js nella cartella public): ```npm run dev```
 6. Creare nella view del layout il collegamento ai file compilati da webpack.mix.js:
 ```
 <link rel="stylesheet" href=" {{ asset('css/app.css') }} ">
@@ -102,3 +103,20 @@ import 'bootstrap/js/dist/dropdown';
 ```
 7. Rilanciare d azero il comando da terminale: ```npm run watch```
 8. Usare le classi di bootstrap 5 nelle views
+
+## Creare e gestire la prima rotta
+
+1. aprire il file web.php
+2. Da terminale lanciare il comando: ```php artisan make:controller [NomeCOntroller]```
+2. creiamo la struttura della rotta sulla base del controller:
+```
+Route::get('/', 'PageController@index' )->name('home');
+```
+
+
+## Stampare tabella nel terminale per leggere le liste
+1. lanciare da terminale il comando: ```php artisan route:list```
+
+## creare un model
+
+1. aprire il terminale e lanciare il comando: ```php artisan make:model Models/[NomeModello]```
