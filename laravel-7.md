@@ -1,3 +1,29 @@
+## Iniziare progetto laravel 7 da zero
+
+1. Aprire vs code, entrare nella cartella dove lanciare il progetto e lanciare da terminale il comando:
+```composer create-project --prefer-dist laravel/laravel:^7.0 [NOME PROGETTO]```
+2. Entriamo nella cartella progetto e lanciamo i comandi per creare la repository:
+   1. Creare una Repository direttamente sul profilo personale di Github
+   2. Aprire il terminale preferito e spostarsi nella cartella di lavoro che si vuole inizializzare come repository
+   3. Utilizzare il comando ``` git init ```
+   4. Poi il comando ```git add -A ```
+   5. Poi il comando ```git commit -m " Testo del commit " ```
+   6. Poi il comando: ```git branch -M main```
+   7. Poi il comando ```git remote add origin .........URL DELLA REPO........```
+   8. Poi il secondo comando ```git push -u origin main```
+3. Se vogliamo utilizzare Sass:
+    1. Lanciamo da terminale il comando: ```npm i```
+    2. Poi il comando: ```npm run dev```
+    3. Poi il comando: ```npm run watch```
+    4. Per gestire gli url delle immagini caricate in sass, modificare il file 📃 webpack.mix.js aggiungendo le options in questo modo:
+    ```
+    mix.js('resources/js/app.js', 'public/js')
+        .sass('resources/sass/app.scss', 'public/css')
+        .options({
+        processCssUrls: false});
+    ```
+4. Per attivare il progetto lanciare il comando: ```php artisan serve```
+
 ## Clonazione Progetto Laravel Già avviato
 
 1. Clonare sul pc il progetto da github
@@ -34,31 +60,6 @@ return [
 
 3. Nel 📃web.php importare il file in una variabile: ``` $pasta = config('pasta'); ```
 4. Impostare il return della rotta get così per associazione chiave => valore: ``` return view('prodotti', ['products' => $pasta] ); ```
-
-## Iniziare progetto laravel 7 da zero
-
-1. Aprire vs code, entrare nella cartella dove lanciare il progetto e lanciare da terminale il comando:
-```composer create-project --prefer-dist laravel/laravel:^7.0 [NOME PROGETTO]```
-2. Entriamo nella cartella progetto e lanciamo i comandi per creare la repository:
-   1. Creare una Repository direttamente sul profilo personale di Github
-   2. Aprire il terminale preferito e spostarsi nella cartella di lavoro che si vuole inizializzare come repository
-   3. Utilizzare il comando ``` git init ```
-   4. Poi il comando ```git add -A ```
-   5. Poi il comando ```git commit -m " Testo del commit " ```
-   6. Poi il comando ```git remote add origin .........URL DELLA REPO........```
-   7. Poi il secondo comando ```git push -u origin master```
-3. Se vogliamo utilizzare Sass:
-    1. Lanciamo da terminale il comando: ```npm i```
-    2. Poi il comando: ```npm run dev```
-    3. Poi il comando: ```npm run watch```
-    4. Per gestire gli url delle immagini caricate in sass, modificare il file 📃 webpack.mix.js aggiungendo le options in questo modo:
-    ```
-    mix.js('resources/js/app.js', 'public/js')
-        .sass('resources/sass/app.scss', 'public/css')
-        .options({
-        processCssUrls: false});
-    ```
-4. Per attivare il progetto lanciare il comando: ```php artisan serve```
 
 ## Installare node_modules per usare dipendenze NPM
 1. Lanciare il comando da terminale: ```npm install```
